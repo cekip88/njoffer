@@ -1,0 +1,30 @@
+include  template/vars
+doctype html
+html(lang='ru')
+	include  template/style
+	body.-bg
+		.set
+			main
+				section.login.login-wh
+					.section
+						.login-form-cont.row.alic.jus
+							.login-logo
+								img(src='/img/logo.png' alt='')
+							form.login-form.-with-bg
+								h1.title Sign In
+								h2.subtitle Create an account to continue
+								label.inpt.-full
+									input(type='email' placeholder='Email')
+								label.inpt.-full
+									input(type='password' placeholder='Password' id="pwd")
+									button.btn-eye(data-click="front:showPassword" type='button' data-for="#pwd")
+										svg
+											use(xlink:href='/img/sprite.svg#eye')
+								.tar
+									a.link(href='/forgot.html') Forgot Password?
+								button.btn.-blue.-full
+									span Sign In
+								.login-form-actions
+									span Not a member yet?
+									a(href='/signup.html').link Sign Up
+			include template/footer

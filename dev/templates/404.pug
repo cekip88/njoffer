@@ -1,0 +1,17 @@
+extends template/main
+append vars
+    -
+        page_title = 'Page Not Found'
+block content
+    main
+        section.n404
+           .section.n404-content
+               h1.n404-title.title Page Not Found
+               img.n404-img(src='/img/404.png')
+               a.link.-with-img.n404-link(href='#')
+                   svg
+                    use(xlink:href='/img/sprite.svg#chevron_left')
+                    span Back To Homepage
+
+        script(src='/front.js' type='module')
+    include template/footer

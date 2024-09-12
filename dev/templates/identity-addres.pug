@@ -1,0 +1,190 @@
+extends template/main
+append vars
+	-
+		page_title = 'Identity'
+block content
+	main
+		section.identity
+			.section.home-section
+				.breads
+					a(href='#').breads-item.-home Home
+					span.breads-delim >
+					a(href='#').breads-item Identity Protection
+				.white-block_head.title-head
+					h5.title.identity-title
+						span Identity Protection
+					.white-block-status.-active.row
+						svg
+							use(xlink:href='/img/sprite.svg#check_circle')
+						span Active
+				.identity-content.row
+					.identity-left
+						.select.identity-select(data-click="front:openSelect")
+							span.select-head
+								span.select-option Filters
+								svg
+									use(xlink:href='/img/sprite.svg#chevron_right')
+							span.select-body
+								.select-body_item
+									label.checkbox
+										input(type='checkbox')
+										span Address
+								.select-body_item
+									label.checkbox
+										input(type='checkbox')
+										span Phone
+								.select-body_item
+									label.checkbox
+										input(type='checkbox')
+										span Name
+								.select-body_item
+									label.checkbox
+										input(type='checkbox')
+										span Credit
+								.select-body_item
+									label.checkbox
+										input(type='checkbox')
+										span Criminal
+								.select-body_item
+									label.checkbox
+										input(type='checkbox')
+										span Internet
+								.select-body_item
+									label.checkbox
+										input(type='checkbox')
+										span Payday Loan
+								.select-body_item
+									label.checkbox
+										input(type='checkbox')
+										span Social
+								.select-body_item
+									label.checkbox
+										input(type='checkbox')
+										span Bankruptcy
+								.select-body_item
+									label.checkbox
+										input(type='checkbox')
+										span Death
+								.select-body_item
+									label.checkbox
+										input(type='checkbox')
+										span Location
+								.select-body_item
+									label.checkbox
+										input(type='checkbox')
+										span Initial
+								.select-body_item
+									label.checkbox
+										input(type='checkbox')
+										span Other
+						ul.identity-list
+							li.white-block-list-item
+								.white-block-list-item_image
+									svg
+										use(xlink:href='/img/sprite.svg#mark_as_unread')
+								.white-block-list-item_content
+									span Jan 17 at 5:22 AM
+									strong Your password appeared in a data leak
+							li.white-block-list-item
+								.white-block-list-item_image
+									svg
+										use(xlink:href='/img/sprite.svg#money_off')
+								.white-block-list-item_content
+									span Jan 17 at 5:22 AM
+									strong Your password appeared in multiple data breach records for jmurack@gmail.com
+							li.white-block-list-item(data-click="front:showHalf" data-popup='#address-form')
+								.white-block-list-item_image
+									svg
+										use(xlink:href='/img/sprite.svg#credit_score')
+								.white-block-list-item_content
+									span Jan 17 at 5:22 AM
+									strong Your email address for “Infostealer Naz.API Logs” appeared in a data leak
+							li.white-block-list-item
+								.white-block-list-item_image
+									svg
+										use(xlink:href='/img/sprite.svg#captive_portal')
+								.white-block-list-item_content
+									span Jan 17 at 5:22 AM
+									strong We completed your 1st remove request to AllWebLeads
+							li.white-block-list-item
+								.white-block-list-item_image
+									svg
+										use(xlink:href='/img/sprite.svg#badge')
+								.white-block-list-item_content
+									span Jan 17 at 5:22 AM
+									strong We completed your 1st remove request to Equifax
+							li.white-block-list-item
+								.white-block-list-item_image
+									svg
+										use(xlink:href='/img/sprite.svg#group')
+								.white-block-list-item_content
+									span Jan 17 at 5:22 AM
+									strong We completed your 1st remove request to OldPhonebook
+							li.white-block-list-item
+								.white-block-list-item_image
+									svg
+										use(xlink:href='/img/sprite.svg#call')
+								.white-block-list-item_content
+									span Jan 17 at 5:22 AM
+									strong We completed your 1st remove request to Lexis Nexis - Know X
+							li.white-block-list-item
+								.white-block-list-item_image
+									svg
+										use(xlink:href='/img/sprite.svg#badge')
+								.white-block-list-item_content
+									span Jan 17 at 5:22 AM
+									strong We completed your 1st remove request to Lexis Nexis - Know X
+							li.white-block-list-item
+								.white-block-list-item_image
+									svg
+										use(xlink:href='/img/sprite.svg#location_on')
+								.white-block-list-item_content
+									span Jan 17 at 5:22 AM
+									strong We completed your 1st remove request to Lexis Nexis - Know X
+						button.btn.-full.-blue.identity-more
+							| Load More
+					#address-form.popup-half.-opened
+						.popup-half-left
+						.popup-half-right
+							.max-527
+								button.popup-close(data-click="front:closeHalf" data-popup='#address-form')
+									svg
+										use(xlink:href='/img/sprite.svg#close')
+								h2.block-title Your email address for “Infostealer Naz.API Logs” appeared in a data leak
+								p.text
+									| A recent scan of the dark web revealed your email address,
+									| which could be accessed by hackers and spammers.
+									| To protect yourself, be cautious of any phishing emails you receive.
+								ul.list.identity-popup-list
+									li.list-item
+										strong Site
+										span verifications.io
+									li.list-item
+										strong Email
+										span jmurack@gmail.com
+									li.list-item
+										strong Password
+										span jo****9
+									li.list-item
+										strong Breach location
+										span Unknown
+									li.list-item
+										strong Date found
+										span Feb 6, 2024
+								h6.subtitle Information
+								p.text
+									| Having your information leaked can be unsettling, but hackers and
+									| scammers can't do much with just your email address.
+									| They typically target active email addresses for malicious purposes.
+								p.text
+									| Be alert for spam and phishing scams, as hackers may attempt to
+									| trick you into revealing sensitive information.
+									| Protect your email account with a strong password to prevent unauthorized access.
+								p.text
+									| The dark web is a hidden section of the internet where information can
+									| be anonymously shared. While it can offer privacy benefits,
+									| it is frequently utilized for illicit activities, such as trading stolen data.
+								button.btn.identity-popup-btn Resolve Alert
+		script(src='/front.js' type='module')
+	include footer-profile
+

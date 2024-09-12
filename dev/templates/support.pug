@@ -1,0 +1,53 @@
+extends template/main
+append vars
+	-
+		page_title = 'Support'
+block content
+	main
+		section.vault
+			.section.home-section
+				.breads
+					a(href='#').breads-item.-home Home
+					span.breads-delim >
+					a(href='#').breads-item Support
+				h5.white-block_title.vault-title
+					span Support
+				.vault-row.row
+					.vault-left.support-left
+						p.text
+							| If you need assistance, feel free to contact us via phone or email. We're here to help with any questions or concerns you may have.
+						p.text.support-text
+							span Call us:&nbsp;
+							a(href="tel:8552006788") 855-200-6788
+							br
+							span Email us:
+							a(href="mailto:support@identimaxx.com") support@identimaxx.com
+						p.text
+							| American Identity Group
+							br
+							| 137 S Broadway
+							br
+							| Suite B4 
+							br
+							| South Amboy, NJ 08879
+					.vault-right.support-right
+						form.support-form.change-form
+							h5.subtitle How can we help?
+							.change-row
+								.inpt.-full
+									input(type='text' placeholder='Name')
+							.row.jusb.change-row
+								.inpt
+									input(type='email' placeholder='Email')
+								.inpt
+									input(type='text' placeholder='Phone number')
+							.change-row
+								.inpt.-full
+									input(type='text' placeholder='Subject')
+							.change-row
+								.inpt.-full
+									textarea(placeholder='Your message')
+							.change-buttons
+								button.btn.-blue.-full Submit
+		script(src='/front.js' type='module')
+	include footer-profile

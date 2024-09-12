@@ -1,0 +1,160 @@
+extends template/main
+append vars
+	-
+		page_title = 'My Vault'
+block content
+	main
+		section.vault
+			.section.home-section
+				.breads
+					a(href='#').breads-item.-home Home
+					span.breads-delim >
+					a(href='#').breads-item My Vault
+				h5.white-block_title.vault-title
+					span My Vault
+				.vault-row.row
+					.vault-left
+						nav.vault-tabs
+							button.vault-tab
+								| Personal
+							button.vault-tab.-active
+								| Financial
+							button.vault-tab
+								| Auto
+							button.vault-tab
+								| Other
+						.vault-left-content
+							.vault-accordeon
+								.vault-accordeon-item.-show
+									.vault-accordeon-item_head.row
+										.vault-accordeon-item_img
+											svg
+												use(xlink:href='/img/sprite.svg#credit_card')
+										.vault-accordeon-item_title Credit Card
+										button.vault-accordeon-item_arr
+											svg
+												use(xlink:href='/img/sprite.svg#chevron_right')
+									.vault-accordeon-item_body
+										.vault-accordeon-item_input
+											input(type='text' value='Credit Card')
+											.vault-accordeon-item_action
+												button
+													svg
+														use(xlink:href='/img/sprite.svg#more_vert')
+												.vault-accordeon-item_actions
+													button
+														svg
+															use(xlink:href='/img/sprite.svg#border_color')
+														span Edit Details
+													button
+														svg
+															use(xlink:href='/img/sprite.svg#adelete')
+														span Delete Item
+										button.link.-plus
+											svg
+												use(xlink:href='/img/sprite.svg#add')
+											span Add credit card
+								.vault-accordeon-item
+									.vault-accordeon-item_head.row
+										.vault-accordeon-item_img
+											svg
+												use(xlink:href='/img/sprite.svg#vault-financial')
+										.vault-accordeon-item_title Savings Account
+										button.vault-accordeon-item_arr
+											svg
+												use(xlink:href='/img/sprite.svg#chevron_right')
+									.vault-accordeon-item_body
+								.vault-accordeon-item
+									.vault-accordeon-item_head.row
+										.vault-accordeon-item_img
+											svg
+												use(xlink:href='/img/sprite.svg#vault-financial')
+										.vault-accordeon-item_title Checking Account
+										button.vault-accordeon-item_arr
+											svg
+												use(xlink:href='/img/sprite.svg#chevron_right')
+									.vault-accordeon-item_body
+								.vault-accordeon-item
+									.vault-accordeon-item_head.row
+										.vault-accordeon-item_img
+											svg
+												use(xlink:href='/img/sprite.svg#vault-financial')
+										.vault-accordeon-item_title Retirement Account
+										button.vault-accordeon-item_arr
+											svg
+												use(xlink:href='/img/sprite.svg#chevron_right')
+									.vault-accordeon-item_body
+					.vault-right
+						h3.subtitle What is the Identimaxx vault?
+						.vault-img
+							img(src='/img/vault.svg')
+						h4.subtitle.-little
+							| Your own digital lockbox
+						p.text.vault-text Safeguard important information and files in your vault, an essential tool for protecting your identity. Documents stored here will be encrypted, but not all of them are not monitored on the dark web.
+						.vault-ensure
+							.vault-ensure_img
+								img(src='/img/ensure.svg')
+							.vault-ensure_content
+								strong.vault-ensure_title Ensure your safety with Identimaxx’s vault service.
+								span.vault-ensure_text The vault serves as your digital lockbox, safeguarding your data and sensitive files with our top-tier encryption.
+
+		script(src='/front.js' type='module')
+	.popup#popup
+		#popup-inner.popup-inner
+			#popup-head.popup-head
+			#popup-body.popup-body
+			button.popup-close(data-click="front:closePopup")
+				svg
+					use(xlink:href='/img/sprite.svg#close')
+	div(hidden)#popup-temp
+		.member-popup#stop-monitoring
+			h5.title-popup.block-title Stop Monitoring this?
+			p.text.member-text
+				| Would you like to remove this individual/
+				br
+				| property from our monitoring list?
+			.member-buttons
+				button.btn.-blue Stop Monitoring
+				button.btn Keep Monitoring
+		.change-method.member-popup#add-property
+			h5.title-popup.block-title Add Property
+			form.change-form
+				.row.jusb.change-row
+					.inpt
+						span.inpt-placeholder First Name
+						input(type='text')
+					.inpt
+						span.inpt-placeholder Last Name
+						input(type='text')
+				.change-row
+					.inpt.-full
+						span.inpt-placeholder Address
+						input(type='text')
+				.row.change-row
+					.inpt.-full
+						span.inpt-placeholder City
+						label.select.change-select
+							span.select-head
+								span.select-option &nbsp;
+								svg
+									use(xlink:href='/img/sprite.svg#chevron_right')
+							span.select-body
+				.change-row.row
+					.inpt
+						span.inpt-placeholder State
+						label.select.change-select
+							span.select-head
+								span.select-option &nbsp;
+								svg
+									use(xlink:href='/img/sprite.svg#chevron_right')
+							span.select-body
+					.inpt
+						span.inpt-placeholder Zip Code
+						input(type='text')
+				.change-row
+					.inpt.-full
+						span.inpt-placeholder Phone
+						input(type='text')
+				.change-buttons.change-buttons-update
+					button.btn.-blue.-full Submit
+	include footer-profile

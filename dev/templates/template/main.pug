@@ -1,0 +1,16 @@
+include  vars
+include ../../../../../core/mixins/mixins
+include ../data/data
+doctype html
+html(lang='ru')
+	include  style
+	body
+		.set
+			-if(adheader)
+				include header-l
+			-else
+				include header
+			block main
+				block aside
+				block content
+

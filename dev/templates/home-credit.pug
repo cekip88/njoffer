@@ -1,0 +1,209 @@
+extends template/main
+append vars
+	-
+		page_title = 'Home'
+block content
+	main
+		section.home
+			.section.home-section
+				.row
+					.home-row.row
+						.link.-plus
+							svg
+								use(xlink:href='/img/sprite.svg#add')
+							span Add Family Member
+						.home-row-titles.row
+							.home-row_info
+								span My Protection:
+								strong  Active
+							.home-row_info
+								span Account Type:
+								strong  Family
+							.home-row_info
+								span Last Login Date:
+								span  03/15/2024
+				.row.white-items
+					.white-item.home-white-items
+						.white-block
+							.white-block_head
+								h5.white-block_title.row
+									svg
+										use(xlink:href='/img/sprite.svg#id_card')
+									span Identity Protection
+								.white-block-status.-active.row
+									svg
+										use(xlink:href='/img/sprite.svg#check_circle')
+									span Active
+							.white-block-body
+								.white-block-alerts
+									| You have 15 unread alerts.
+								ul.white-block-list
+									li.white-block-list-item
+										.white-block-list-item_image
+											svg
+												use(xlink:href='/img/sprite.svg#request_quote')
+										.white-block-list-item_content
+											span Jan 17 at 5:22 AM
+											strong
+												| Your password appeared in multiple data breach
+												| records for jmurack@gmail.com
+									li.white-block-list-item
+										.white-block-list-item_image
+											svg
+												use(xlink:href='/img/sprite.svg#mark_as_unread')
+										.white-block-list-item_content
+											span Jan 17 at 5:22 AM
+											strong
+												| Your password appeared in a data leak
+									li.white-block-list-item
+										.white-block-list-item_image
+											svg
+												use(xlink:href='/img/sprite.svg#encryptedBlue')
+										.white-block-list-item_content
+											span Jan 17 at 5:22 AM
+											strong
+												| Your password appeared in multiple data breach
+												| records for jmurack@gmail.com
+									button.btn.-blue Vie All Alerts
+						.white-block
+							.white-block_head
+								h5.white-block_title.row
+									svg
+										use(xlink:href='/img/sprite.svg#news')
+									span Title Monitoring
+								.white-block-status.-active.row
+									svg
+										use(xlink:href='/img/sprite.svg#check_circle')
+									span Active
+							.white-block-body
+								.white-block-alerts
+									| You have 12 unread alerts.
+								ul.white-block-list
+									li.white-block-list-item
+										.white-block-list-item_image
+											svg
+												use(xlink:href='/img/sprite.svg#request_quote')
+										.white-block-list-item_content
+											span Jan 17 at 5:22 AM
+											strong
+												| Your password appeared in multiple data breach
+												| records for jmurack@gmail.com
+									li.white-block-list-item
+										.white-block-list-item_image
+											svg
+												use(xlink:href='/img/sprite.svg#supervisor_account')
+										.white-block-list-item_content
+											span Jan 17 at 5:22 AM
+											strong
+												| Your password appeared in multiple data breach
+									li.white-block-list-item
+										.white-block-list-item_image
+											svg
+												use(xlink:href='/img/sprite.svg#location_away')
+										.white-block-list-item_content
+											span Jan 17 at 5:22 AM
+											strong
+												| Your password appeared in multiple data breach
+												| records for jmurack@gmail.com
+									button.btn.-blue Vie All Alerts
+						.white-block.-large
+							.white-block_head
+								h5.white-block_title.row
+									svg
+										use(xlink:href='/img/sprite.svg#credit_score')
+									span Credit Monitoring
+								.white-block-status.-active.row
+									svg
+										use(xlink:href='/img/sprite.svg#check_circle')
+									span Active
+							.white-block-body
+								.white-block-list-item.nopad
+									.white-block-list-item_left
+										h5.white-block-list-item_title.-with-icon
+											| VantageScore 3.0
+											svg
+												use(xlink:href="/img/sprite.svg#help")
+										p.credit-monitoring-gray
+											span According to data collected by Experian
+										button.btn.-blue View Details
+									.white-block-list-item_right
+										.white-block-rating_img
+											.white-block-rating_img_scoreStart
+												| 300
+											.white-block-rating_img_score
+												| 670
+											.white-block-rating_img_scoreTitle
+												| Your credit rating
+											.white-block-rating_img_scoreRating
+												| Good
+											.white-block-rating_img_scoreEnd
+												| 850
+											.white-block-rating_img_scoreCircle
+												span
+											img(src='/img/rating.svg')
+						.white-block
+							.white-block_head
+								h5.white-block_title.row
+									svg
+										use(xlink:href='/img/sprite.svg#disable_visible')
+									span Privacy Protect
+								.white-block-status.-active.row
+									svg
+										use(xlink:href='/img/sprite.svg#check_circle')
+									span Active
+							.white-block-body
+								.white-block-alerts We’ve removed #[strong 16] pieces of exposed personal information for you, minimizing your risk of identity theft, hacks and spam.
+								button.btn.-blue.-bi View Removed Information
+					.gray-block.home-right
+						h6.gray-block-title ID Risk Score
+						.gray-actions
+							span Breach Risk Score
+							strong 710
+							i
+							em Medium
+						p.gray-text
+							| Our scoring models use predictive statistical
+							| methods, combining historic identity theft victim
+							| data with over a thousand relevant factors to power advanced AI algorithms.
+						button.btn Check my score
+						.wh-block.-little
+							h6.block-title My Vault
+							.wh-block-buttons
+								button.block-btn
+									svg
+										use(xlink:href='/img/sprite.svg#directions_car')
+									span License
+								button.block-btn
+									svg
+										use(xlink:href='/img/sprite.svg#mail')
+									span Email
+								button.block-btn
+									svg
+										use(xlink:href='/img/sprite.svg#call')
+									span Phone
+								button.block-btn
+									svg
+										use(xlink:href='/img/sprite.svg#id_card')
+									span SSN
+								button.block-btn
+									svg
+										use(xlink:href='/img/sprite.svg#credit_card')
+									span Credit
+								button.block-btn
+									svg
+										use(xlink:href='/img/sprite.svg#account_balance')
+									span Savings
+							a.wh-all(href='#')
+								| View All Items
+								svg
+									use(xlink:href='/img/sprite.svg#chevron_right')
+				.row.gray-bottom-row
+					.gray-block.gray-bottom-block
+						h6.gray-block-title Lost Wallet Service
+						p.gray-text In the event that you misplace or your wallet is stolen,we will assist you in securing your lost cards and important information.
+						a.btn Learn More
+					.gray-block.gray-bottom-block
+						h6.gray-block-title Client Support
+						p.gray-text If you need assistance, our support team is here to help you with any questions or concerns you may have.
+						a.btn Get Help
+	include footer-profile

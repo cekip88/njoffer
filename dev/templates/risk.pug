@@ -1,0 +1,129 @@
+extends template/main
+append vars
+	-
+		page_title = 'My Vault'
+block content
+	main
+		section.vault
+			.section.home-section
+				.breads
+					a(href='#').breads-item.-home Home
+					span.breads-delim >
+					a(href='#').breads-item Identity Risk Score
+				.risk-row
+					.vault-left.lost-left.risk-left
+						.risk-left-inner
+							h5.white-block_title.vault-title
+								span Identity Risk Score
+							.risk-score
+								.row.risk-score-row
+									.risk-score-ba
+										span
+									.risk-score-digit 710
+									.risk-score-state Medium
+									.risk-score-img
+										img(src='/img/score.svg').risk-score-icon
+										img(src='/img/score-mobile.svg').risk-score-icon-mobile
+										button.risk-score-btn
+							.block-subtitle.risk-subtitle How does it work?
+							p.text.risk-text
+								| Our scoring models use predictive statistical methods, combining historic identity theft victim data with over a thousand relevant factors to power advanced AI algorithms. We also provide actionable guidance based on each score to help reduce your risk.
+							p.text.risk-text
+								| We extracted a huge data set of historic victim, recovery, breach, account, demographic, and online data to train our machine learning prediction models.
+					.risk-data
+						.risk-data-head.row(data-click="front:toggleHistoric")
+							span Historic Victim Data
+							svg
+								use(xlink:href='/img/sprite.svg#expand_more')
+						.risk-data-body
+							.risk-data-body-item.row
+								svg.risk-data-body-item_img
+									use(xlink:href='/img/sprite.svg#check2')
+								.risk-data-body-item_content
+									h5.risk-data-body-item_title 2,425,486
+									.risk-data-body-item_subtitle ID Theft Customers
+									p.risk-data-body-item_text
+										| We built our 6 ID Risk Score models by aggregating data from over 2.4 million
+										| customers across
+										| 102 different identity theft protection and monitoring brands that we power.
+							.risk-data-body-item.row
+								svg.risk-data-body-item_img
+									use(xlink:href='/img/sprite.svg#check2')
+								.risk-data-body-item_content
+									h5.risk-data-body-item_title 2,425,486
+									.risk-data-body-item_subtitle ID Theft Customers
+									p.risk-data-body-item_text
+										| We built our 6 ID Risk Score models by aggregating data from over 2.4 million
+										| customers across
+										| 102 different identity theft protection and monitoring brands that we power.
+							.risk-data-body-item.row
+								svg.risk-data-body-item_img
+									use(xlink:href='/img/sprite.svg#check2')
+								.risk-data-body-item_content
+									h5.risk-data-body-item_title 2,425,486
+									.risk-data-body-item_subtitle ID Theft Customers
+									p.risk-data-body-item_text
+										| We built our 6 ID Risk Score models by aggregating data from over 2.4 million
+										| customers across
+										| 102 different identity theft protection and monitoring brands that we power.
+							.risk-data-body-item.row
+								svg.risk-data-body-item_img
+									use(xlink:href='/img/sprite.svg#check2')
+								.risk-data-body-item_content
+									h5.risk-data-body-item_title 2,425,486
+									.risk-data-body-item_subtitle ID Theft Customers
+									p.risk-data-body-item_text
+										| We built our 6 ID Risk Score models by aggregating data from over 2.4 million
+										| customers across
+										| 102 different identity theft protection and monitoring brands that we power.
+					.risk-right
+						h2.block-title Tips to reduce your risk
+						ul.risk-list
+							li.risk-list-item.-first
+								img(src='/img/risk.png')
+							li.risk-list-item
+								.risk-list-item_img
+									svg
+										use(xlink:href='/img/sprite.svg#problem')
+								.risk-list-item_content
+									.risk-list-item-title Monitor Your Credit Report
+									.risk-list-item-text Regularly check your credit report for any unauthorized or suspicious activity.
+							li.risk-list-item
+								.risk-list-item_img
+									svg
+										use(xlink:href='/img/sprite.svg#privacy_tip')
+								.risk-list-item_content
+									.risk-list-item-title Limit Exposure on Social Media
+									.risk-list-item-text Avoid sharing too much personal information on social media platforms.
+							li.risk-list-item
+								.risk-list-item_img
+									svg
+										use(xlink:href='/img/sprite.svg#phishing')
+								.risk-list-item_content
+									.risk-list-item-title Be Wary of Phishing Scams
+									.risk-list-item-text Be cautious of emails, calls, or messages asking for personal information and verify the source before responding.
+							li.risk-list-item
+								.risk-list-item_img
+									svg
+										use(xlink:href='/img/sprite.svg#security_update_good')
+								.risk-list-item_content
+									.risk-list-item-title Keep Your Devices Secure
+									.risk-list-item-text Use security software and keep your devices updated to protect against malware and viruses.
+								img(src='/img/risk.png').risk-list-svg
+							li.risk-list-item.-full
+								.risk-list-item_img
+									svg
+										use(xlink:href='/img/sprite.svg#encrypted')
+								.risk-list-item_content
+									.risk-list-item-title Enable Two-Factor Authentication
+									.risk-list-item-text Add an extra layer of security to your accounts by enabling two-factor authentication.
+							li.risk-list-item.-full
+								.risk-list-item_img
+									svg
+										use(xlink:href='/img/sprite.svg#key')
+								.risk-list-item_content
+									.risk-list-item-title Use Strong, Unique Passwords
+									.risk-list-item-text Use complex passwords for your online accounts and avoid using the same password across multiple sites.
+
+		script(src='/front.js' type='module')
+	include footer-profile

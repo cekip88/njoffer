@@ -1,0 +1,220 @@
+extends template/main
+append vars
+	-
+		page_title = 'Login'
+block content
+	main
+		section.home
+			.section.home-section
+				.row
+					.home-row.row
+						.link.-plus
+							svg
+								use(xlink:href='/img/sprite.svg#add')
+							span Add Family Member
+						.home-row-titles.row
+							.home-row_info
+								span My Protection:
+								strong  Active
+							.home-row_info
+								span Account Type:
+								strong  Family
+							.home-row_info
+								span Last Login Date:
+								span  03/15/2024
+				.row.white-items
+					.white-item.home-white-items
+						.white-block
+							.white-block_head
+								h5.white-block_title.home-block_title.row
+									svg
+										use(xlink:href='/img/sprite.svg#id_card')
+									span Identity Protection
+								.white-block-status.-active.row
+									svg
+										use(xlink:href='/img/sprite.svg#check_circle')
+									span Active
+							.white-block-body
+								.white-block-alerts
+									| You have 15 unread alerts.
+								ul.white-block-list
+									li.white-block-list-item
+										.white-block-list-item_image
+											svg
+												use(xlink:href='/img/sprite.svg#request_quote')
+										.white-block-list-item_content
+											span Jan 17 at 5:22 AM
+											strong
+												| Your password appeared in multiple data breach
+												| records for jmurack@gmail.com
+									li.white-block-list-item
+										.white-block-list-item_image
+											svg
+												use(xlink:href='/img/sprite.svg#mark_as_unread')
+										.white-block-list-item_content
+											span Jan 17 at 5:22 AM
+											strong
+												| Your password appeared in a data leak
+									li.white-block-list-item
+										.white-block-list-item_image
+											svg
+												use(xlink:href='/img/sprite.svg#captive_portal')
+										.white-block-list-item_content
+											span Jan 17 at 5:22 AM
+											strong
+												| Your password appeared in multiple data breach
+												| records for jmurack@gmail.com
+									button.btn.-blue View All Alerts
+						.white-block
+							.white-block_head
+								h5.white-block_title.row
+									svg
+										use(xlink:href='/img/sprite.svg#news')
+									span Title Monitoring
+								.white-block-status.-active.row
+									svg
+										use(xlink:href='/img/sprite.svg#check_circle')
+									span Active
+							.white-block-body
+								.white-block-alerts
+									| You have 12 unread alerts.
+								ul.white-block-list
+									li.white-block-list-item
+										.white-block-list-item_image
+											svg
+												use(xlink:href='/img/sprite.svg#request_quote')
+										.white-block-list-item_content
+											span Jan 17 at 5:22 AM
+											strong
+												| Your password appeared in multiple data breach
+												| records for jmurack@gmail.com
+									li.white-block-list-item
+										.white-block-list-item_image
+											svg
+												use(xlink:href='/img/sprite.svg#supervisor_account')
+										.white-block-list-item_content
+											span Jan 17 at 5:22 AM
+											strong
+												| Your password appeared in multiple data breach
+									li.white-block-list-item
+										.white-block-list-item_image
+											svg
+												use(xlink:href='/img/sprite.svg#location_away')
+										.white-block-list-item_content
+											span Jan 17 at 5:22 AM
+											strong
+												| Your password appeared in multiple data breach
+												| records for jmurack@gmail.com
+									button.btn.-blue View All Alerts
+						.white-block.-upgrade
+							.white-upgrade
+								h5.white-upgrade-title Upgrade Plan
+								p.white-upgrade-text Activate Credit Monitoring and enhance your security with our upgraded plan.
+								button.white-upgrade-btn Monitor my Credit
+							.white-block-inner
+								.white-block_head
+									h5.white-block_title.row
+										svg
+											use(xlink:href='/img/sprite.svg#credit_score')
+										span Credit Monitoring
+									.white-block-status.-inactive.row
+										svg
+											use(xlink:href='/img/sprite.svg#error')
+										span Inactive
+								.white-block-body
+									.white-block-alerts
+										| Monitor your credit efforlessly with our service, ensuring your financial security.
+									ul.white-block-list.home-mobile-hidden
+										li.white-block-list-item.-empty
+											.white-block-list-item_image
+												.white-block-list-item_circle
+											.white-block-list-item_content
+												.white-block-list-item_header
+												.white-block-list-item_line
+												.white-block-list-item_line
+												.white-block-list-item_line.-short
+						.white-block.-upgrade
+							.white-upgrade
+								h5.white-upgrade-title Upgrade Plan
+								p.white-upgrade-text Activate Privacy Protect and secure your anonymity with fast activity alerts.
+								button.white-upgrade-btn Protect My Privacy
+							.white-block-inner
+								.white-block_head
+									h5.white-block_title.row
+										svg
+											use(xlink:href='/img/sprite.svg#disable_visible')
+										span Privacy Protect
+									.white-block-status.-inactive.row
+										svg
+											use(xlink:href='/img/sprite.svg#error')
+										span Inactive
+								.white-block-body
+									.white-block-alerts
+										| Protect your privacy online with our service, ensuring peace of mind while you browse
+									ul.white-block-list.home-mobile-hidden
+										li.white-block-list-item.-empty
+											.white-block-list-item_image
+												.white-block-list-item_circle
+											.white-block-list-item_content
+												.white-block-list-item_header
+												.white-block-list-item_line
+												.white-block-list-item_line
+												.white-block-list-item_line.-short
+					.gray-block.home-right
+						h6.gray-block-title ID Risk Score
+						.gray-actions
+							span Breach Risk Score
+							strong 710
+							i
+							em Medium
+						p.gray-text
+							| Our scoring models use predictive statistical
+							| methods, combining historic identity theft victim
+							| data with over a thousand relevant factors to power advanced AI algorithms.
+						button.btn Check my score
+						.wh-block.-little
+							h6.block-title My Vault
+							.wh-block-buttons
+								button.block-btn
+									svg
+										use(xlink:href='/img/sprite.svg#directions_car')
+									span License
+								button.block-btn
+									svg
+										use(xlink:href='/img/sprite.svg#mail')
+									span Email
+								button.block-btn
+									svg
+										use(xlink:href='/img/sprite.svg#call')
+									span Phone
+								button.block-btn
+									svg
+										use(xlink:href='/img/sprite.svg#id_card')
+									span SSN
+								button.block-btn
+									svg
+										use(xlink:href='/img/sprite.svg#credit_card')
+									span Credit
+								button.block-btn
+									svg
+										use(xlink:href='/img/sprite.svg#account_balance')
+									span Savings
+							a.wh-all(href='#')
+								| View All Items
+								svg
+									use(xlink:href='/img/sprite.svg#chevron_right')
+				.row.gray-bottom-row
+					.gray-block.gray-bottom-block
+						h6.gray-block-title Lost Wallet Service
+						p.gray-text In the event that you misplace or your wallet is stolen,we will assist you in securing your lost cards and important information.
+						a.btn(href='/lost.html') Learn More
+					.gray-block.gray-bottom-block
+						h6.gray-block-title Client Support
+						p.gray-text If you need assistance, our support team is here to help you with any questions or concerns you may have.
+						a.btn(href='/support.html') Get Help
+	include footer-profile
+
+
+
+
+

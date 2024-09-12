@@ -1,0 +1,21 @@
+extends template/main
+append vars
+	-
+		page_title = 'Login'
+		adheader=true
+block content
+	main
+		section.login
+			.section
+				.login-form-cont
+					form.login-form.reset-form
+						h1.title Forgot Password?
+						h2.subtitle.
+							#[span Enter your email to reset your password]
+						label.inpt.-full.forgot-inpt
+							input(type='email' placeholder='Please enter your email address')
+						button.btn.-blue.-full.forgot-btn
+							span Submit
+						.login-form-actions
+							a.link(href='/reset.html') Back
+	include footer-profile

@@ -1,0 +1,184 @@
+header.head
+	.section
+		.row.head-row
+			.head-logo
+				a(href='#')
+					svg
+						use(xlink:href='/img/sprite.svg#main_logo')
+			nav.head-menu-cont
+				ul.head-menu.row
+					li.head-menu_item
+						a(href='#') Home
+					li.head-menu_item.-dropdown
+						a(href='#') My Services
+						span
+							svg
+								use(xlink:href='/img/sprite.svg#more')
+						ul.head-menu_sublist
+							li.head-mobile-subitem
+								svg.head-mobile-subitem_icon
+									use(xlink:href='/img/sprite.svg#id_card')
+								span.head-mobile-subitem_value
+									| Identity Protection
+							li.head-mobile-subitem
+								svg.head-mobile-subitem_icon.menu_icon
+									use(xlink:href='/img/sprite.svg#credit_score')
+								span.head-mobile-subitem_value.menu_value
+									| Credit Monitoring
+							li.head-mobile-subitem.-active
+								svg.head-mobile-subitem_icon
+									use(xlink:href='/img/sprite.svg#news')
+								span.head-mobile-subitem_value
+									| Title Monitoring
+							li.head-mobile-subitem
+								svg.head-mobile-subitem_icon
+									use(xlink:href='/img/sprite.svg#disable_visible')
+								span.head-mobile-subitem_value
+									| Privacy Protect
+					li.head-menu_item.-dropdown
+						a(href='#') My Vault
+						span
+							svg
+								use(xlink:href='/img/sprite.svg#more')
+						ul.head-menu_sublist
+							li.head-mobile-subitem
+								svg.head-mobile-subitem_icon
+									use(xlink:href='/img/sprite.svg#person')
+								span.head-mobile-subitem_value
+									| Personal
+							li.head-mobile-subitem
+								svg.head-mobile-subitem_icon.menu_icon
+									use(xlink:href='/img/sprite.svg#exchange')
+								span.head-mobile-subitem_value.menu_value
+									| Financial
+							li.head-mobile-subitem
+								svg.head-mobile-subitem_icon.menu_icon
+									use(xlink:href='/img/sprite.svg#directions_car')
+								span.head-mobile-subitem_value.menu_value
+									| Auto
+							li.head-mobile-subitem.-active
+								svg.head-mobile-subitem_icon
+									use(xlink:href='/img/sprite.svg#lock')
+								span.head-mobile-subitem_value
+									| Other
+					//li.head-menu_item
+					//    a(href='#') Support
+			.head-actions
+				.head-login.row.alic
+					a(href='#').head-actions-link Support
+					button.btn
+						span Sign Up
+					button.btn.-blue
+						span Sign In
+				button.head-burger(data-click="front:showMobileMenu")
+					span.head-burger_item
+			.head-mobile-menu-cont
+				.row.head-row
+					.head-logo
+						a(href='#')
+							svg
+								use(xlink:href='/img/sprite.svg#main_logo')
+					.head-actions
+						button.head-burger(data-click="front:showMobileMenu")
+							span.head-burger_item
+				ul.head-mobile-menu.row
+					li.head-mobile-menu_item.head-menu_item
+						a(href='#') Home
+					li.head-mobile-menu_item.-dropdown.head-menu_item(data-click="front:openMenuItem")
+						a(href='#').menu_value
+							| My Services
+						span
+							svg
+								use(xlink:href='/img/sprite.svg#more')
+					ul.head-mobile-sublist
+						li.head-mobile-subitem
+							svg.head-mobile-subitem_icon
+								use(xlink:href='/img/sprite.svg#id_card')
+							span.head-mobile-subitem_value
+								| Identity Protection
+						li.head-mobile-subitem
+							svg.head-mobile-subitem_icon.menu_icon
+								use(xlink:href='/img/sprite.svg#credit_score')
+							span.head-mobile-subitem_value.menu_value
+								| Credit Monitoring
+						li.head-mobile-subitem.-active
+							svg.head-mobile-subitem_icon
+								use(xlink:href='/img/sprite.svg#news')
+							span.head-mobile-subitem_value
+								| Title Monitoring
+						li.head-mobile-subitem
+							svg.head-mobile-subitem_icon
+								use(xlink:href='/img/sprite.svg#disable_visible')
+							span.head-mobile-subitem_value
+								| Privacy Protect
+					li.head-mobile-menu_item.-dropdown.head-menu_item(data-click="front:openMenuItem")
+						a(href='#') My Vault
+						span
+							svg
+								use(xlink:href='/img/sprite.svg#more')
+					ul.head-mobile-sublist
+						li.head-mobile-subitem
+							svg.head-mobile-subitem_icon
+								use(xlink:href='/img/sprite.svg#person')
+							span.head-mobile-subitem_value
+								| Personal
+						li.head-mobile-subitem
+							svg.head-mobile-subitem_icon.menu_icon
+								use(xlink:href='/img/sprite.svg#exchange')
+							span.head-mobile-subitem_value.menu_value
+								| Financial
+						li.head-mobile-subitem.-active
+							svg.head-mobile-subitem_icon
+								use(xlink:href='/img/sprite.svg#lock')
+							span.head-mobile-subitem_value
+								| Other
+					li.head-mobile-menu_item.-dropdown.head-menu_item(data-click="front:openMenuItem")
+						a(href='#') Profile
+						span
+							svg
+								use(xlink:href='/img/sprite.svg#more')
+					ul.head-mobile-sublist
+						li.head-mobile-subitem
+							span.head-mobile-subitem_value
+								| Add member
+						li.head-mobile-subitem
+							span.head-mobile-subitem_value.menu_value
+								| Account Details
+						li.head-mobile-subitem
+							span.head-mobile-subitem_value.menu_value
+								| Membership
+						li.head-mobile-subitem
+							span.head-mobile-subitem_value
+								| Notifications
+						li.head-mobile-subitem
+							span.head-mobile-subitem_value
+								| Benefits
+					li.head-mobile-menu_item.head-menu_item
+						a(href='#') Support
+				ul.head-mobile-info
+					li.head-actions-link.head-mobile-info_item.head-menu_item.-dropdown
+						a(href='#') John Doe
+						span
+							svg
+								use(xlink:href='/img/sprite.svg#more')
+					li.home-row_info
+						span My Protection:
+						strong  Active
+					li.home-row_info
+						span Account Type:
+						strong  Family
+					li.home-row_info
+						span Last Login Date:
+						span  03/15/2024
+					li.head-mobile-info-button
+						button.btn.-blue.-plus.-white-color.link
+							svg
+								use(xlink:href='/img/sprite.svg#add')
+							span Add Family Member
+				ul.users-list
+					li.users-item
+						button.users-item_btn.active John Doe
+					li.users-item
+						button.users-item_btn Richard Doe
+					li.users-item
+						button.users-item_btn Myriam Anne Richardson

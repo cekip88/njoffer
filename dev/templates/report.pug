@@ -1,0 +1,104 @@
+extends template/main
+append vars
+	-
+		page_title = 'My Vault'
+block content
+	main
+		section.vault
+			.section.home-section
+				.breads
+					a(href='#').breads-item.-home Home
+					span.breads-delim >
+					a(href='#').breads-item.-home Title Monitoring
+					span.breads-delim >
+					a(href='#').breads-item Initial Report
+				.vault-row.row
+					.vault-left.report-left
+						h5.white-block_title.vault-title.report-title Hi John,
+						h3.subtitle.report-subtitle
+							| the following is your initial scan report Title Monitoring
+						p.text.report-text
+							| The Property Title Monitoring System detected monitoring information linked to #[strong 3] property records.
+						ul.list.report-list
+							li.list-item
+								a(href='#').link.-blue 10410 W PRAIRIE HILLS CIR, SUN CITY, AZ 85351 1821
+							li.list-item
+								a(href='#').link.-blue S1023 COUNTY ROAD G, WONEWOC, WI 53968
+							li.list-item
+								a(href='#').link.-blue 805 Elenora Hills, New Yesenia, NC 62065
+					.vault-right
+		script(src='/front.js' type='module')
+	.popup-half.-opened.-whiteshadow.report#license
+		.popup-half-left
+		.popup-half-right
+			button.popup-close(data-click="front:closeHalf" data-popup='#license')
+				svg
+					use(xlink:href='/img/sprite.svg#close')
+			.change-method.member-popup.driver.report-scroll-container.report-popup
+				h5.title-popup.block-title 10410 W PRAIRIE HILLS CIR, SUN CITY, AZ 85351 1821
+				br
+				h4.block-title
+					| Alert info
+				p.profile-benefits-content-text
+					| Alert Date: 2020-09-29 04:12:01
+					br
+					| Alert Trigger Fields: Seller original Name, Buyer original Name
+				h4.block-title
+					| Property Record
+				p.profile-benefits-content-text
+					| Address: 10410 W PRAIRIE HILLS CIR, SUN CITY, AZ 85351 1821
+					br
+					| County: MARICOPA.
+					br
+					| Geo Lat: 33.622280
+					br
+					| Geo Long: 112.277930
+					br
+					| Msa: 6200 Phoenix Mesa, AZ
+				h4.block-title
+					| Owner / Buyer / Seller Info
+				h4.block-subtitle
+					| Buyer
+				p.profile-benefits-content-text
+					| Address: 10410 W PRAIRIE HILLS CIR, SUN CITY, AZ 85351 1821
+					br
+					| County: MARICOPA
+					br
+					| Geo Lat: 33.622280
+					br
+					| Geo Long: 112.277930
+					br
+					| Msa: 6200 Phoenix Mesa, AZ
+					br
+					| Original Address: 10410 W PRAIRIE HILLS CIR, SUN CITY, AZ 85351 1821
+					br
+					| Original Csz: SUN CITY, AZ 85351 1821
+				h4.block-subtitle
+					| Buyer 1
+				p.profile-benefits-content-text
+					| Address: 10410 W PRAIRIE HILLS CIR, SUN CITY, AZ 85351 1821
+					br
+					| County: MARICOPA
+				h4.block-subtitle
+					| Buyer
+				p.profile-benefits-content-text
+					| Address: 10410 W PRAIRIE HILLS CIR, SUN CITY, AZ 85351 1821
+					br
+					| County: MARICOPA
+					br
+					| Geo Lat: 33.622280
+					br
+					| Geo Long: 112.277930
+					br
+					| Msa: 6200 Phoenix Mesa, AZ
+					br
+					| Original Address: 10410 W PRAIRIE HILLS CIR, SUN CITY, AZ 85351 1821
+					br
+					| Original Csz: SUN CITY, AZ 85351 1821
+				h4.block-subtitle
+					| Buyer 1
+				p.profile-benefits-content-text
+					| Address: 10410 W PRAIRIE HILLS CIR, SUN CITY, AZ 85351 1821
+					br
+					| County: MARICOPA
+	include footer-profile

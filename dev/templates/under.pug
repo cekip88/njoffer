@@ -1,0 +1,17 @@
+extends template/main
+append vars
+    -
+        page_title = 'Site is Under Maintenance'
+block content
+    main
+        section.n404
+            .section.n404-content
+                h1.n404-title.title Site is Under Maintenance
+                img.n404-img(src='/img/under.png')
+                span.n404-need Need assistance?
+                a.link.-with-img(href='mailto:support@identimaxx.com')
+                    | support@identimaxx.com
+
+        script(src='/front.js' type='module')
+
+    include template/footer
