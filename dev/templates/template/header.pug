@@ -1,3 +1,60 @@
 header.head
-	.section
-
+	.head-logo
+		a.head-logo_link
+			img(src='/img/logo.png')
+	nav.head-nav
+		.head-nav_item
+			a.head-nav_link.active
+				span Sell
+		.head-nav_item
+			a.head-nav_link
+				span Pricing
+		.head-nav_item
+			a.head-nav_link
+				span FAQ'S
+		.head-nav_item
+			.head-nav_cont
+				a.head-nav_link.with_sublist
+					span Testimonials
+				button(data-click="front:showNavSublist").head-nav_show
+			ul.head-nav_sublist
+				li.head-nav_subitem
+					a.head-nav_sublink
+						span Testimonials
+				li.head-nav_subitem
+					a.head-nav_sublink
+						span Submit a Testimonial
+		.head-nav_item
+			.head-nav_cont
+				a.head-nav_link
+					span Why NJ Offer?
+				button(data-click="front:showNavSublist").head-nav_show
+			ul.head-nav_sublist.with_icons
+				li.head-nav_subitem
+					a.head-nav_sublink
+						span About Us
+				li.head-nav_subitem
+					a.head-nav_sublink
+						span How It Works
+				li.head-nav_subitem
+					a.head-nav_sublink
+						span Testimonials
+				li.head-nav_subitem
+					a.head-nav_sublink
+						span FAQ
+	.head-phone
+		a(href="tel:9088002030").head-phone_link
+			span 908-800-2030
+	button(data-click="front:burgerClick").head_burger
+.head_sub
+	.head-logo.head-logo_sub
+		a.head-logo_link
+			img(src="/img/scoll_logo.png")
+	.head-form.location-form
+		label.location-form_label
+			input(type="text" placeholder="Enter your home address...").location-form_input
+			button.location-form_submit
+				span Get Free Offer
+	.head-phone.head-phone_sub
+		a(href="tel:9088002030").head-phone_link
+			span 908-800-2030

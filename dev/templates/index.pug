@@ -1,11 +1,171 @@
 include  template/vars
 doctype html
-html(lang='ru')
+html(lang='en')
 	include  template/style
 	body
 		.set
-			main
-				section.login.login-wh
-					.section
-
+			include template/header
+			main.main
+				section.main-banner
+					.main-banner_row
+						.main-banner_inner
+							.main
+							h1.main_title
+								span Get an offer now with a press of a button.
+							p.main-banner_text Sell your home to NJ Offer so you can skip the hassle of listing, showings with months and months of uncertainty.
+							form.main-banner_form.location-form
+								label.location-form_label
+									input(type="text" placeholder="Enter your home address...").location-form_input
+									button.location-form_submit
+										span Get Free Offer
+						button(data-click="front:showVideo" data-target="#video" data-src="//player.vimeo.com/video/362062231?autoplay=1&hd=1&show_title=1&show_byline=1&show_portrait=0&fullscreen=1").main-banner_play
+					.reviews
+						h3.reviews_title
+							span Customer Reviews
+						p.reviews_text Discover what our customers say about their satisfaction.
+						ul.reviews_list
+							li.reviews_item
+								button(data-click="front:showVideo" data-target="#video" data-src="https://player.vimeo.com/video/555782125?title=0&byline=0&portrait=0")
+									img(src="/img/njoffer-videotestimonial-1-1.png")
+							li.reviews_item
+								button(data-click="front:showVideo" data-target="#video" data-src="https://player.vimeo.com/video/555782125?title=0&byline=0&portrait=0")
+									img(src="/img/njoffer-videotestimonial-2-2.png")
+							li.reviews_item
+								button(data-click="front:showVideo" data-target="#video" data-src="https://player.vimeo.com/video/555782125?title=0&byline=0&portrait=0")
+									img(src="/img/njoffer-videotestimonial-3-1.png")
+				section.simple
+					h3.simple_title
+						span A simple process
+					p.simple_text NJ Offer saves you the hassle of repairs, listing, showings, and months of uncertainty.
+					ul.simple_list
+						li.simple-item
+							img(src="/img/trade_price.png")
+							h5.simple-item_title Request Your Offer Online
+							p.simple-item_text Tell us about your home and all the features and upgrades—it only takes minutes.
+						li.simple-item
+							img(src="/img/identify_new_home.png")
+							h5.simple-item_title Get an Offer Within 24 Hours
+							p.simple-item_text There’s no financing fall-through risk so you can confidently buy your next home.
+						li.simple-item
+							img(src="/img/njoffer-schedule-icon.png")
+							h5.simple-item_title Choose Your Close Date and Schedule
+							p.simple-item_text Line up your close dates so you avoid double-moves and double-mortgages.
+				section.easy
+					h3.easy-upper It's that easy.
+					.easy-banner
+						.easy-banner_inner
+							h3.easy-banner_title 1238
+							h5.easy-banner_subtitle NJ Offers requested
+							p.easy-banner_text Every day, homeowners requests an offer from NJ Offer
+				section.why
+					h3.why_title Why NJ Offer is better
+					.why_row
+						.why-left
+							h5.why-left_title Selling to NJ Offer
+							ul.why-left_list
+								li.why-left_item Competitive cash offer in 24 hours
+								li.why-left_item No listing, prep work, or showings
+								li.why-left_item Skip the repair work and deduct the costs
+								li.why-left_item Choose any close date from 10-60 days
+						.why-middle
+						.why-right
+							h5.why-right_title Traditional home sale
+							ul.why-right_list
+								li.why-right_item Risk of buyer financing fall-through
+								li.why-right_item Hours of prep work and home showings
+								li.why-right_item Manage repairs yourself
+								li.why-right_item Uncertain closing timeline
+				section.why-bottom
+					.why-bottom_row
+						.why-bottom-left
+							h5.why-bottom_title How we make you a competitive offer
+							ul.accord
+								li.accord-item.active
+									button(data-click="front:accord").accord-item_head
+										span 1. Review comparable homes
+									p.accord-item_body We review the sale prices of homes like yours. We’ll share these with you in your offer.
+								li.accord-item
+									button(data-click="front:accord").accord-item_head
+										span 2. Account for unique features
+									p.accord-item_body We compare your home to the comps and adjust for differences in size, condition, and upgrades.
+								li.accord-item
+									button(data-click="front:accord").accord-item_head
+										span 3. Fine tune based on market trends
+									p.accord-item_body We’ve purchased thousands of homes, giving us a deep understanding of local trends.
+						.why-bottom-right
+							h5.why-bottom_title Transparent pricing, no hidden fees!
+							.why-bottom_list
+								.why-bottom_item
+									img(src="/img/service_charge.png")
+									span Service Charge
+								span.why-bottom_plus
+								.why-bottom_item
+									img(src="/img/repair_icon.png")
+									span Repairs
+								span.why-bottom_plus
+								.why-bottom_item
+									img(src="/img/closing_cost-icon.png")
+									span Closings Costs
+							p.why-bottom_text The service charge enables us to give you a stress-free sale and expert support. Repairs and closing costs are comparable to what you’d pay in a traditional sale. All three costs are deducted at close so you pay nothing out of pocket.
+				section.more
+					.more_inner
+						h3.more_title More Options... Better Offers
+						p.more_text Everyone has different circumstances in their life. Maybe you inherited a home but don’t have the time to deal with it and need to sell the inherited house fast. Perhaps you’re facing a foreclosure and need to sell your house fast to avoid foreclosure and save your credit.
+						ul.more_list
+							li.more-item
+								button.more-item_button
+									img(src='/img/njoffer-foreclosure-icon.png')
+								h5.more-item_title Are You Behind On Your Mortgage?
+								p.more_text The possibility of facing foreclosure can be terrifying. Your life is in chaos, but there is a way out!. If going through foreclosure, we have an option for you.
+							li.more-item
+								button.more-item_button
+									img(src='/img/njoffer-sellhouse-icon.png')
+								h5.more-item_title I Inherited A House and I Need to Sell It.
+								p.more_text You’ve just inherited a house and you’re feeling overwhelmed. Perhaps the house needs a lot of repairs that you can't afford, we have an option for you.
+							li.more-item
+								button.more-item_button
+									img(src='/img/njoffer-houseforsale-icon.png')
+								h5.more-item_title I Need To Sell My Home, I Need Cash Fast
+								p.more_text Each month, those pesky bills seem to pile up higher and higher. Whether you’re dealing with an expensive divorce or medical bills, we can help.
+						button(data-click="front:showModal" data-target="#purchase").more_button Get My Free Offer
+				section.contact
+					form.contact-form
+						img(src="/img/mail_icon.png").contact-form_img
+						h3.contact-form_title Get expert real estate tips in your inbox.
+						p.contact-form_text Discover ways to increase your home's value and stay on top of local trends.
+						.contact-form_inner
+							input(type="text" placeholder="First Name..." name="first_name")
+							input(type="tel" placeholder="Phone Number..." name="phone")
+							input(type="email" placeholder="Email Address..." name="email")
+							button.more_button Send me the tips!
+					.contact-info
+						h3.contact-info_title Contact Us:
+						a(href="mailto:info@njoffer.com").contact-info_link info@njoffer.com
+						a(href="tel:9088002030").contact-info_link 908-800-2030
+						button(data-click="front:showModal" data-target="#purchase").contact-info_link Get My Free Offer
+						h5.contact-info_title
+							img(src="/img/country_icon.jpg")
+							span NJ Counties We Buy In:
+						.contact-info_cities
+							a.contact-info_city Atlantic,
+							a.contact-info_city Bergen,
+							a.contact-info_city Burlington,
+							a.contact-info_city Camden,
+							a.contact-info_city Cape May,
+							a.contact-info_city Cumberland,
+							a.contact-info_city Essex,
+							a.contact-info_city Gloucester,
+							a.contact-info_city Hudson,
+							a.contact-info_city Hunterdon,
+							a.contact-info_city Mercer,
+							a.contact-info_city Middlesex,
+							a.contact-info_city Monmouth,
+							a.contact-info_city Morris,
+							a.contact-info_city Ocean,
+							a.contact-info_city Passaic,
+							a.contact-info_city Salem,
+							a.contact-info_city Somerset,
+							a.contact-info_city Sussex,
+							a.contact-info_city Union,
+							a.contact-info_city Warren
 			include template/footer
