@@ -2,14 +2,11 @@ include  vars
 include ../../../../../core/mixins/mixins
 include ../data/data
 doctype html
-html(lang='ru')
+html(lang='en')
 	include  style
 	body
 		.set
-			-if(adheader)
-				include header-l
-			-else
-				include header
+			include header
 			block main
 				block aside
 				block content
