@@ -1,3 +1,5 @@
+html
+	scroll-behavior smooth
 @keyframes breath
 	0%
 		box-shadow 0 0 0 0 RGBA($white,.7)
@@ -12,6 +14,8 @@
 		box-shadow 0 0 0 0 RGBA($white,.7)
 	100%
 		box-shadow 0 0 0 50px RGBA($white,0)
+button,a
+	cursor pointer
 .head
 	padding 16px 15px
 	display flex
@@ -27,11 +31,13 @@
 			+desktop()
 				.head-logo_link
 					margin 0 auto
+					color RGB($white)
 		&_link
-			w 132px
-			display block
+			color RGB($blue)
+			font-weight 700
+			font-size: 1.2em
 			+desktop()
-				w 200px
+				font-size: 2em
 	&-nav
 		wh 100%,calc(100vh - 64px)
 		background-color RGB($dark_gray)
@@ -93,7 +99,6 @@
 			text-transform uppercase
 			+desktop()
 				color RGB($black)
-				cursor pointer
 				&:hover
 					color RGB($blue)
 		&_link
@@ -113,6 +118,7 @@
 				position absolute
 				top 100%
 				left 15px
+				z-index 100
 				&.with_icons
 					.head-nav
 						&_sublink
@@ -190,7 +196,7 @@
 		display none
 		+desktop()
 			w 100%
-			padding 16px 0
+			padding 16px
 			display flex
 			align-items center
 			background-color RGB($blue)
@@ -203,6 +209,10 @@
 			transition .35s ease
 			&.active
 				top 0
+		.head-phone_link
+			+desktop()
+				&:hover
+					color RGB($dark_gray)
 	&-form
 		w calc(100% / 3 * 2)
 		padding 0 16px
@@ -221,7 +231,7 @@
 			background-color RGB($white)
 			border-radius 8px
 			position: relative
-			+desktop()
+			+tablet()
 				&:after
 					content none
 			&:after
@@ -230,48 +240,50 @@
 				background-color RGBA($gray,0.5)
 				position: absolute
 				top 0
-				left 65%
+				right 107px
 		&_input
-			w 65%
-			flex-shrink 0
+			w 100%
 			font-size 13px
 			+desktop()
-				w 73%
 				font-size 18px
 			&,&::placeholder
 				color RGB($black)
 		&_submit
-			w 35%
+			w 95px
+			flex-shrink 0
 			background-color RGB($blue)
 			text-transform uppercase
 			font-size 10px
 			color RGB($white)
-			+desktop()
-				w 27%
+			+tablet()
+				w 180px
 				font-size 15px
+			+desktop()
 				&:hover
 					background-color RGB($dark_gray)
 					
 .main
 	&_title
 		font 27px $f_ub
-		font-weight 600
+		font-weight 700
 		line-height 1.2
 		+desktop()
 			font-size 60px
 	&-banner
 		color RGB($white)
 		background-color RGB($dark_gray)
+		font-weight 500
 		&_row
-			height 400px
-			padding 0 16px
+			//height: 400px
+			padding 24px 16px
 			justify-content center
 			row-gap 30px
 			position relative
 			+desktop()
-				height 625px
-				padding 0 350px 0 125px
-				justify-content space-between
+				//height 625px
+				//padding 0 350px 0 125px
+				//justify-content space-between
+				padding: 100px
 				flex-direction row
 			&:after
 				wh 100%
@@ -292,13 +304,20 @@
 			position relative
 			z-index 1
 		&_inner
-			row-gap 16px
+			row-gap 24px
 			+desktop()
-				max-width 712px
+				max-width 1000px
+				row-gap 24px
+		&_title
+			line-height: 1.5
+			font-size: 18px
+			font-weight 600
+			+desktop()
+				font-size 28px
 		&_text
-			line-height 1.5
+			line-height: 1.5
 			+desktop()
-				font-size 23px
+				font-size 16px
 		&_form
 			w 100%
 		&_play
@@ -317,6 +336,29 @@
 				content "\f04b"
 				font 30px $f_awesome
 				color RGB($blue)
+		&_btns
+			display: flex
+			align-items: center
+			column-gap 20px
+		&_points
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			row-gap 5px
+			+tablet()
+				flex-direction: row
+				column-gap 30px
+			span
+				display: flex
+				align-items: center
+				column-gap 10px
+				font-weight 600
+				&:before
+					wh 7px
+					content ''
+					display: block
+					border-radius 100%
+					background-color: RGB($white)
 .popup
 	padding 44px
 	opacity 0
@@ -366,7 +408,10 @@
 		border none
 		
 .reviews
-	padding 30px 16px 25px
+	padding 48px 16px
+	background-color RGB($dark_gray)
+	+tablet-large()
+		padding-bottom: 100px
 	&_title,&_text
 		text-align: center
 		color RGB($white)
@@ -378,7 +423,10 @@
 		margin-bottom: 16px
 		font-size: 16px
 		+desktop()
+			margin: 0 auto 16px
+			max-width 750px
 			font-size: 18px
+			line-height: 27px
 	&_list
 		display: flex
 		flex-direction: column
@@ -394,6 +442,24 @@
 		&,button,img
 			w 100%
 			
+	&_says
+		max-width 500px
+		margin: 0 auto
+		color RGB($white)
+		font-weight 500
+		line-height: 1.5
+		+tablet()
+			font-size: 16px
+		+desktop()
+			max-width 700px
+			margin-top: 40px
+			font-size: 18px
+		li
+			margin-top: 16px
+			+tablet-large()
+				margin-top: 20px
+		em
+			color RGB($blue)
 .simple
 	padding: 48px 0
 	display: flex
@@ -494,15 +560,15 @@
 		margin-bottom: 8px
 		font-size: 32px
 		font-weight 600
-		+tablet-large()
+		+tablet()
 			text-align: center
 	&_row
-		+tablet-large()
+		+tablet()
 			display: flex
 			justify-content: center
 			column-gap 50px
 	&-middle
-		+tablet-large()
+		+tablet()
 			padding-top: 13px
 			display: flex
 			flex-direction: column
@@ -526,6 +592,8 @@
 				border-radius 100%
 				background-color: RGBA($gray,.2)
 	&-left,&-right
+		+tablet()
+			w 100%
 		&_title
 			padding: 24px 0
 			font-size: 24px
@@ -543,15 +611,16 @@
 	&-left
 		&_title
 			color RGB($blue)
-			+tablet-large()
+			+tablet()
 				text-align: right
 		&_item
-			+tablet-large()
+			+tablet()
+				text-align: right
 				justify-content: flex-end
 			&:before
 				content "\f00c"
 				color RGB($blue)
-				+tablet-large()
+				+tablet()
 					order 1
 	&-right
 		&_item
@@ -571,16 +640,18 @@
 			+tablet-large()
 				display: flex
 		&_title
-			margin-bottom: 48px
-			font-size: 28px
+			//margin-bottom: 48px
+			margin-bottom: 24px
+			font-size: 32px
 			font-weight 600
 			line-height: 33px
 			text-align: center
 		&-left,&-right
-			padding: 48px 24px
+			padding: 0 24px 48px
 			+tablet-large()
 				w 100%
-				max-width 555px
+				padding: 0 48px 48px
+				//max-width 555px
 		&-left
 			background-color: RGB($white)
 		&-right
@@ -609,16 +680,34 @@
 			line-height: 24px
 			text-align: center
 			font-weight 500
+		&-list
+			&_item
+				margin-top: 10px
+				display: flex
+				align-items: center
+				column-gap 10px
+				+desktop()
+					margin-top: 20px
+					font-size: 18px
+				&:before
+					wh 7px
+					display: block
+					content ""
+					background-color: RGB($blue)
+					border-radius 100%
+				b
+					font-weight 700
 .accord
 	border-top: 1px solid RGB($gray)
 	&-item
 		height: 55px
-		border-bottom: 1px solid RGBA($gray,.3)
+		border-bottom: 1px solid RGB($gray)
 		overflow hidden
 		transition .35s ease
 		&.active
 			height initial
 			.accord-item_head
+				color RGB($blue)
 				&:after
 					transform rotate(180deg)
 		&_head
@@ -626,8 +715,11 @@
 			display: flex
 			align-items: center
 			justify-content: space-between
-			font-size: 14px
 			font-weight 600
+			+desktop()
+				font-size: 16px
+				&:hover
+					color RGB($blue)
 			&:after
 				content "\f107"
 				font-family: $f_awesome
@@ -635,16 +727,14 @@
 				font-size: 25px
 				transition .35s ease
 		&_body
-			padding: 20px 20px 20px 0
-			border-top: 1px solid RGB($gray)
-			font-weight 500
+			padding: 20px
+			border-top: 1px solid RGBA($gray,.3)
 			line-height: 21px
 .more
 	padding 150px 15px 48px
 	background-color: rgb(232, 233, 237)
 	text-align: center
 	+tablet-large()
-		padding-bottom: 100px
 		font-weight: 500
 	&_inner
 		+desktop()
@@ -652,27 +742,53 @@
 			margin: 0 auto
 	&_title
 		margin-bottom: 8px
-		font-size: 35px
+		font-size: 32px
 		font-weight 700
 		line-height: 42px
 	&_text
-		margin-bottom: 16px
+		//margin-bottom: 16px
+		margin-bottom: 24px
 		font-size: 14px
 		line-height: 1.5
 		+tablet-large()
+			margin-bottom: 48px
 			font-size: 18px
 	&_list
-		padding 24px
+		//padding 24px
+		margin-top: 24px
 		+tablet-large()
-			display: flex
-			column-gap 80px
+			//display: flex
+			//column-gap 80px
 	&-item
 		margin-bottom: 24px
+		+tablet()
+			w 500px
+			margin: 0 auto 24px
+			display: flex
+			align-items: center
+			column-gap 10px
+			&:before
+				display: block
+				content "\f00c"
+				color RGB($blue)
+				font-family: $f_awesome
+				font-size: 18px
+		+desktop()
+			w 700px
+			column-gap 20px
 		&_title
-			margin: 24px 0
-			font-size: 25px
+			font-size: 18px
 			line-height: 30px
 			font-weight 700
+			+desktop()
+				color RGB($dark_gray)
+		&_title,.more_text
+			margin-bottom: 0
+			+desktop()
+				display: inline
+		&_inner
+			+tablet()
+				text-align: left
 	&_button
 		padding: 12px 30px
 		background-color: RGB($blue)
@@ -726,6 +842,7 @@
 		background-color: RGB($white)
 		+tablet-large()
 			w 50%
+			flex-shrink 0
 			padding 24px 83px 48px
 			transform translateY(-50px)
 		+desktop()
@@ -809,9 +926,12 @@
 			justify-content: flex-start
 			column-gap 63px
 	&_logo
-		w 257px
 		margin-bottom: 24px
-		display: block
+		font-size: 1.2em
+		color RGB($blue)
+		font-weight 700
+		+desktop()
+			font-size: 2em
 	&_text,&-col_link
 		margin-bottom: 16px
 		font-weight 500
@@ -842,24 +962,29 @@
 				margin-bottom: 36px
 		&_link
 			color RGB($white)
-			cursor pointer
 			+desktop()
 				margin-bottom: 20px
 				&:hover
 					color RGB($blue)
 	&-copy
-		padding: 16px 0
+		padding: 16px 0 140px
 		background-color: #1e2931
+		+tablet-large()
+			padding-bottom: 16px
 		&_inner
 			display: flex
 			flex-direction: column
 			align-items: center
 			font-size: 10px
-			+tablet-large()
-				w 1110px
-				margin: 0 auto
+			+tablet()
+				padding: 0 15px
 				flex-direction: row
 				justify-content: space-between
+				font-size: 14px
+			+desktop()
+				w 1110px
+				p0
+				margin: 0 auto
 				font-size: 18px
 		span,&_link
 			padding: 4px
@@ -869,7 +994,6 @@
 			align-items: center
 		&_link
 			color RGB($white)
-			cursor pointer
 			+desktop()
 				&:hover
 					color: RGB($blue)
@@ -889,6 +1013,7 @@
 		bottom 0
 		left 0
 		right 0
+		z-index 1000
 		.location-form_submit
 			font-size: 12px
 		+tablet-large()
@@ -907,4 +1032,14 @@
 			margin-top: 10px
 			font-weight 700
 			font-size: 18px
-			
+.faq
+	padding: 0 20px 50px
+	max-width 1110px
+	margin 0 auto
+	+tablet-large()
+		padding 50px 0
+	&_title
+		padding: 24px 0;
+		font-size: 28px;
+		line-height: 33px;
+		font-weight: 700;

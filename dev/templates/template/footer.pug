@@ -2,15 +2,16 @@ footer.footer
 	.footer_row
 		.footer-col
 			a.footer_logo
-				img(src="/img/footer_logo.jpg")
-			p.footer_text The revolutionary way to buy and sell your home. NJ Offer is on a mission to make it as easy to trade-in your home as it is to trade-in your car. We bring certainty, convenience and cost-efficiency to home buying and selling.
+				| CashForMyNJHouse
+			p.footer_text Buy4Cash is a real estate investment company. We are not real estate agents or brokers, and we do not list houses on the MLS. We purchase homes directly from sellers for cash.
 		.footer-col
 			h5.footer-col_title Sell Your Home
-			a.footer-col_link Sell
-			a.footer-col_link Why NJ Offer?
-			a.footer-col_link Pricing
-			a.footer-col_link FAQ’S
-			a.footer-col_link Our Blog
+			a(href="#sell").footer-col_link Sell
+			a(href="#why").footer-col_link Why Buy4Cash?
+			a(href="#about").footer-col_link About Us
+			//a.footer-col_link Pricing
+			a(href="#faq").footer-col_link FAQ’S
+			//a.footer-col_link Our Blog
 		.footer-col
 			h5.footer-col_title Contact Us
 			a(href="tel:9088002030").footer-col_link 908-800-2030
@@ -18,17 +19,19 @@ footer.footer
 			a(href="mailto:info@njoffer.com").footer-col_link info@njoffer.com
 	.footer-copy
 		.footer-copy_inner
-			span Copyright © 2024 NJ Offer. All Rights Reserved.
+			span Copyright © 2024 Buy4Cash. All Rights Reserved.
 			.footer-copy_links
 				a.footer-copy_link Privacy Policy
 				.disc
 				a.footer-copy_link Terms of Use
+				.disc
+				a(href="#contact").footer-copy_link Contact Us
 	form.mobile-form
 		button(data-click="front:showMobileForm" type="button").mobile-form_button Get my free offer
 		label.location-form_label.mobile-form_label
 			input(type="text" placeholder="Enter your home address...").location-form_input
 			button.location-form_submit
-				span Get Free Offer
+				span Get Your Cash Offer
 		span.mobile-form_text FREE • NO OBLIGATION • 24H
 	.popup
 		.popup-inner#video
@@ -45,7 +48,7 @@ footer.footer
 				label.location-form_label
 					input(type="text" placeholder="Enter your home address...").location-form_input
 					button.location-form_submit
-						span Get Free Offer
+						span Get Your Cash Offer
 				button(data-click="front:closeModal" type="button").purchase_close
 					svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
 						path(d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z")

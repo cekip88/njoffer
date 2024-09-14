@@ -6,50 +6,38 @@ html(lang='en')
 		.set
 			include template/header
 			main.main
-				section.main-banner
+				section.main-banner#sell
 					.main-banner_row
 						.main-banner_inner
-							.main
 							h1.main_title
-								span Get an offer now with a press of a button.
-							p.main-banner_text Sell your home to NJ Offer so you can skip the hassle of listing, showings with months and months of uncertainty.
-							form.main-banner_form.location-form
-								label.location-form_label
-									input(type="text" placeholder="Enter your home address...").location-form_input
-									button.location-form_submit
-										span Get Free Offer
-						button(data-click="front:showVideo" data-target="#video" data-src="//player.vimeo.com/video/362062231?autoplay=1&hd=1&show_title=1&show_byline=1&show_portrait=0&fullscreen=1").main-banner_play
-					.reviews
-						h3.reviews_title
-							span Customer Reviews
-						p.reviews_text Discover what our customers say about their satisfaction.
-						ul.reviews_list
-							li.reviews_item
-								button(data-click="front:showVideo" data-target="#video" data-src="https://player.vimeo.com/video/555782125?title=0&byline=0&portrait=0")
-									img(src="/img/njoffer-videotestimonial-1-1.png")
-							li.reviews_item
-								button(data-click="front:showVideo" data-target="#video" data-src="https://player.vimeo.com/video/555782125?title=0&byline=0&portrait=0")
-									img(src="/img/njoffer-videotestimonial-2-2.png")
-							li.reviews_item
-								button(data-click="front:showVideo" data-target="#video" data-src="https://player.vimeo.com/video/555782125?title=0&byline=0&portrait=0")
-									img(src="/img/njoffer-videotestimonial-3-1.png")
-				section.simple
+								span Sell Your New Jersey Home for Cash, Quickly and Hassle-Free!
+							h3.main-banner_title Receive a No-Obligation Cash Offer in 24 Hours—No Repairs, No Fees, No Stress.
+							p.main-banner_text At Buy4Cash, we specialize in helping New Jersey homeowners sell their homes fast. Whether you’re facing foreclosure, dealing with an inherited property, or simply want a quick sale, we’re here to make the process smooth and stress-free.
+							.main-banner_btns
+								button(data-click="front:showModal" data-target="#purchase").more_button Get Your Cash Offer
+								a(href="#contact").more_button Learn How It Works
+							.main-banner_points
+								span Simple, Fast, and Fair Process.
+								span No Hidden Fees or Commissions.
+								span We Buy Houses in Any Condition.
+						//button(data-click="front:showVideo" data-target="#video" data-src="//player.vimeo.com/video/362062231?autoplay=1&hd=1&show_title=1&show_byline=1&show_portrait=0&fullscreen=1").main-banner_play
+				section.simple#how
 					h3.simple_title
-						span A simple process
+						span Our Simple 3-Step Process
 					p.simple_text NJ Offer saves you the hassle of repairs, listing, showings, and months of uncertainty.
 					ul.simple_list
 						li.simple-item
 							img(src="/img/trade_price.png")
 							h5.simple-item_title Request Your Offer Online
-							p.simple-item_text Tell us about your home and all the features and upgrades—it only takes minutes.
+							p.simple-item_text Submit Your Property Details: “Provide basic information about your property. We’ll analyze the data and contact you to discuss your options.”
 						li.simple-item
 							img(src="/img/identify_new_home.png")
 							h5.simple-item_title Get an Offer Within 24 Hours
-							p.simple-item_text There’s no financing fall-through risk so you can confidently buy your next home.
+							p.simple-item_text Receive a Fair Cash Offer: “Within 24 hours, you’ll get a fair, no-obligation cash offer. We take into account the current market conditions and property specifics.”
 						li.simple-item
 							img(src="/img/njoffer-schedule-icon.png")
 							h5.simple-item_title Choose Your Close Date and Schedule
-							p.simple-item_text Line up your close dates so you avoid double-moves and double-mortgages.
+							p.simple-item_text Choose Your Closing Date: “Once you accept the offer, pick a closing date that suits your timeline. We handle all the paperwork, making it easy for you.”
 				section.easy
 					h3.easy-upper It's that easy.
 					.easy-banner
@@ -57,86 +45,159 @@ html(lang='en')
 							h3.easy-banner_title 1238
 							h5.easy-banner_subtitle NJ Offers requested
 							p.easy-banner_text Every day, homeowners requests an offer from NJ Offer
-				section.why
-					h3.why_title Why NJ Offer is better
+				section.why#why
+					h3.why_title Why Sell to Buy4Cash?
 					.why_row
 						.why-left
-							h5.why-left_title Selling to NJ Offer
+							h5.why-left_title Selling to Buy4Cash
 							ul.why-left_list
-								li.why-left_item Competitive cash offer in 24 hours
-								li.why-left_item No listing, prep work, or showings
-								li.why-left_item Skip the repair work and deduct the costs
-								li.why-left_item Choose any close date from 10-60 days
+								li.why-left_item Commissions & Fees: None
+								li.why-left_item Who Pays Closing Costs? We pay
+								li.why-left_item Inspection & Financing Contingency: None
+								li.why-left_item Appraisal Needed: None
+								li.why-left_item Average Days Until Sold: Immediate cash offer
+								li.why-left_item Number of Showings: 1(Just Us)
+								li.why-left_item Closing Date	30-60 days after accepting: Your choice
 						.why-middle
 						.why-right
-							h5.why-right_title Traditional home sale
+							h5.why-right_title Traditional Home Sale
 							ul.why-right_list
-								li.why-right_item Risk of buyer financing fall-through
-								li.why-right_item Hours of prep work and home showings
-								li.why-right_item Manage repairs yourself
-								li.why-right_item Uncertain closing timeline
+								li.why-right_item Commissions & Fees: 6%
+								li.why-right_item Who Pays Closing Costs? 2% on average
+								li.why-right_item Inspection & Financing Contingency: Yes
+								li.why-right_item Appraisal Needed: Yes
+								li.why-right_item Average Days Until Sold: 90 days
+								li.why-right_item Number of Showings: Multiple
+								li.why-right_item Closing Date	30-60 days after accepting: The buyer's offer
 				section.why-bottom
 					.why-bottom_row
 						.why-bottom-left
-							h5.why-bottom_title How we make you a competitive offer
-							ul.accord
-								li.accord-item.active
-									button(data-click="front:accord").accord-item_head
-										span 1. Review comparable homes
-									p.accord-item_body We review the sale prices of homes like yours. We’ll share these with you in your offer.
-								li.accord-item
-									button(data-click="front:accord").accord-item_head
-										span 2. Account for unique features
-									p.accord-item_body We compare your home to the comps and adjust for differences in size, condition, and upgrades.
-								li.accord-item
-									button(data-click="front:accord").accord-item_head
-										span 3. Fine tune based on market trends
-									p.accord-item_body We’ve purchased thousands of homes, giving us a deep understanding of local trends.
-						.why-bottom-right
-							h5.why-bottom_title Transparent pricing, no hidden fees!
-							.why-bottom_list
-								.why-bottom_item
-									img(src="/img/service_charge.png")
-									span Service Charge
-								span.why-bottom_plus
-								.why-bottom_item
-									img(src="/img/repair_icon.png")
-									span Repairs
-								span.why-bottom_plus
-								.why-bottom_item
-									img(src="/img/closing_cost-icon.png")
-									span Closings Costs
-							p.why-bottom_text The service charge enables us to give you a stress-free sale and expert support. Repairs and closing costs are comparable to what you’d pay in a traditional sale. All three costs are deducted at close so you pay nothing out of pocket.
-				section.more
+							h5.why-bottom_title Why Choose Buy4Cash
+							ul.why-bottom-list
+								li.why-bottom-list_item
+									p
+										b Fast and Fair Offers:&nbsp;
+										span Get a competitive offer within 24 hours.
+								li.why-bottom-list_item
+									p
+										b Sell As-Is:&nbsp;
+										span No need to make repairs or clean—sell your home in its current condition.
+								li.why-bottom-list_item
+									p
+										b No Commissions or Fees:&nbsp;
+										span Save money by avoiding agent fees and closing costs.
+								li.why-bottom-list_item
+									p
+										b Local Expertise:&nbsp;
+										span We are local experts who understand the New Jersey market and can offer you the best price.
+								li.why-bottom-list_item
+									p
+										b Stress-Free Process:&nbsp;
+										span Skip the showings, negotiations, and waiting—sell directly to us for a quick and easy transaction.
+						//.why-bottom-right
+						//	h5.why-bottom_title Transparent pricing, no hidden fees!
+						//	.why-bottom_list
+						//		.why-bottom_item
+						//			img(src="/img/service_charge.png")
+						//			span Service Charge
+						//		span.why-bottom_plus
+						//		.why-bottom_item
+						//			img(src="/img/repair_icon.png")
+						//			span Repairs
+						//		span.why-bottom_plus
+						//		.why-bottom_item
+						//			img(src="/img/closing_cost-icon.png")
+						//			span Closings Costs
+						//	p.why-bottom_text The service charge enables us to give you a stress-free sale and expert support. Repairs and closing costs are comparable to what you’d pay in a traditional sale. All three costs are deducted at close so you pay nothing out of pocket.
+
+				section.more#about
 					.more_inner
-						h3.more_title More Options... Better Offers
-						p.more_text Everyone has different circumstances in their life. Maybe you inherited a home but don’t have the time to deal with it and need to sell the inherited house fast. Perhaps you’re facing a foreclosure and need to sell your house fast to avoid foreclosure and save your credit.
+						h3.more_title About Buy4Cash
+						p.more_text Buy4Cash is a trusted, local home buying company in New Jersey. With years of experience in the real estate industry, we are committed to providing homeowners with a quick, stress-free selling experience. Our team is dedicated to making the process transparent and fair, offering you the best possible cash price for your home.
+						h3.more_title We Can Help in Any Situation
 						ul.more_list
 							li.more-item
-								button.more-item_button
-									img(src='/img/njoffer-foreclosure-icon.png')
-								h5.more-item_title Are You Behind On Your Mortgage?
-								p.more_text The possibility of facing foreclosure can be terrifying. Your life is in chaos, but there is a way out!. If going through foreclosure, we have an option for you.
+								//button.more-item_button
+								//	img(src='/img/njoffer-foreclosure-icon.png')
+								.more-item_inner
+									h5.more-item_title Foreclosure:
+									p.more_text If you’re facing foreclosure, we can offer a fast solution to avoid damaging your credit.
 							li.more-item
-								button.more-item_button
-									img(src='/img/njoffer-sellhouse-icon.png')
-								h5.more-item_title I Inherited A House and I Need to Sell It.
-								p.more_text You’ve just inherited a house and you’re feeling overwhelmed. Perhaps the house needs a lot of repairs that you can't afford, we have an option for you.
+								.more-item_inner
+									h5.more-item_title Inherited Properties:
+									p.more_text Inherited a property you don’t want to keep? We can help you sell it quickly.
 							li.more-item
-								button.more-item_button
-									img(src='/img/njoffer-houseforsale-icon.png')
-								h5.more-item_title I Need To Sell My Home, I Need Cash Fast
-								p.more_text Each month, those pesky bills seem to pile up higher and higher. Whether you’re dealing with an expensive divorce or medical bills, we can help.
+								.more-item_inner
+									h5.more-item_title Relocation:
+									p.more_text Moving for a job or other reasons? We can provide a quick sale so you can relocate stress-free.
+							li.more-item
+								.more-item_inner
+									h5.more-item_title Divorce:
+									p.more_text Need to sell a shared property? We offer a smooth and fair process during a difficult time.
+							li.more-item
+								.more-item_inner
+									h5.more-item_title Downsizing:
+									p.more_text Looking to downsize your home? We make it easy to transition to a smaller space.
+							//li.more-item
+							//	button.more-item_button
+							//		img(src='/img/njoffer-sellhouse-icon.png')
+							//	h5.more-item_title I Inherited A House and I Need to Sell It.
+							//	p.more_text You’ve just inherited a house and you’re feeling overwhelmed. Perhaps the house needs a lot of repairs that you can't afford, we have an option for you.
+							//li.more-item
+							//	button.more-item_button
+							//		img(src='/img/njoffer-houseforsale-icon.png')
+							//	h5.more-item_title I Need To Sell My Home, I Need Cash Fast
+							//	p.more_text Each month, those pesky bills seem to pile up higher and higher. Whether you’re dealing with an expensive divorce or medical bills, we can help.
 						button(data-click="front:showModal" data-target="#purchase").more_button Get My Free Offer
-				section.contact
+				section.faq#faq
+					h3.faq_title Frequently Asked Questions
+					ul.accord
+						li.accord-item.active
+							button(data-click="front:accord").accord-item_head
+								span How quickly can I get an offer?
+							p.accord-item_body You’ll receive a cash offer within 24 hours after contacting us.
+						li.accord-item
+							button(data-click="front:accord").accord-item_head
+								span Do I need to pay for any repairs?
+							p.accord-item_body No, we buy homes in their current condition, so you don’t need to worry about repairs.
+						li.accord-item
+							button(data-click="front:accord").accord-item_head
+								span How is my offer determined?
+							p.accord-item_body We consider the property’s condition, location, and current market trends to make a fair cash offer.
+						li.accord-item
+							button(data-click="front:accord").accord-item_head
+								span Are there any fees or commissions?
+							p.accord-item_body No, there are no fees or commissions when you sell to us.
+						li.accord-item
+							button(data-click="front:accord").accord-item_head
+								span How fast can we close?
+							p.accord-item_body We can close in as little as 7 days, or on a date that works for you.
+				section.reviews
+					h3.reviews_title
+						span What Our Clients Are Saying
+					//ul.reviews_list
+					//	li.reviews_item
+					//		button(data-click="front:showVideo" data-target="#video" data-src="https://player.vimeo.com/video/555782125?title=0&byline=0&portrait=0")
+					//			img(src="/img/njoffer-videotestimonial-1-1.png")
+					//	li.reviews_item
+					//		button(data-click="front:showVideo" data-target="#video" data-src="https://player.vimeo.com/video/555782125?title=0&byline=0&portrait=0")
+					//			img(src="/img/njoffer-videotestimonial-2-2.png")
+					//	li.reviews_item
+					//		button(data-click="front:showVideo" data-target="#video" data-src="https://player.vimeo.com/video/555782125?title=0&byline=0&portrait=0")
+					//			img(src="/img/njoffer-videotestimonial-3-1.png")
+					ul.reviews_says
+						li “I needed to sell my house quickly due to a job relocation. Buy4Cash gave me a fair offer and closed on my timeline. It was incredibly easy!” - #[em Michael T.]
+						li “The process was straightforward, and the team at Buy4Cash was professional and helpful. I highly recommend them if you need to sell fast.” - #[em Karen W.]
+
+				section.contact#contact
 					form.contact-form
 						img(src="/img/mail_icon.png").contact-form_img
-						h3.contact-form_title Get expert real estate tips in your inbox.
-						p.contact-form_text Discover ways to increase your home's value and stay on top of local trends.
+						h3.contact-form_title Ready to Sell? Contact Us Today!
+						p.contact-form_text Fill out the form below to get started. We’re here to answer any questions and provide you with a fast, fair cash offer.
 						.contact-form_inner
-							input(type="text" placeholder="First Name..." name="first_name")
-							input(type="tel" placeholder="Phone Number..." name="phone")
-							input(type="email" placeholder="Email Address..." name="email")
+							input(type="text" placeholder="First Name" name="first_name")
+							input(type="tel" placeholder="Phone" name="phone")
+							input(type="email" placeholder="Email" name="email")
 							button.more_button Send me the tips!
 					.contact-info
 						h3.contact-info_title Contact Us:

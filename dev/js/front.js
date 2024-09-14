@@ -93,11 +93,10 @@ class Front extends G_G{
 		if (iframe) iframe.removeAttribute('src');
 	}
 
-	accord({item}) {
+	accord({item:head}) {
 		const _ = this;
 		let
-			accord = item.closest('.accord-item'),
-			head = item,
+			accord = head.closest('.accord-item'),
 			body = accord.lastElementChild,
 			cont = accord.parentElement;
 
@@ -109,14 +108,18 @@ class Front extends G_G{
 			})
 		} else {
 			let activeItem = cont.querySelector('.accord-item.active');
+			let delay = 0;
 			if (activeItem) {
+				delay = 350;
 				_.accord({item:activeItem.querySelector('.accord-item_head')})
 			}
-			accord.style = `height:${head.clientHeight + body.clientHeight}px;`;
-			accord.classList.add('active');
 			setTimeout(()=>{
-				accord.removeAttribute('style');
-			},500)
+				accord.style = `height:${head.clientHeight + body.clientHeight}px;`;
+				accord.classList.add('active');
+				setTimeout(()=>{
+					accord.removeAttribute('style');
+				},500)
+			},delay)
 		}
 	}
 
